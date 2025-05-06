@@ -19,6 +19,11 @@ function App() {
 
   //temp
 
+  function setSDSecondary(val:number) {
+    setSiteDarkness(val)
+    return "val"
+  }
+
   useEffect(()=>{
     setSivu("pääsivu")
   }, [])
@@ -60,7 +65,7 @@ function App() {
           <Box sx={{width: 100}}>
             <Slider
               defaultValue={siteDarkness}
-              getAriaValueText={setSiteDarkness}
+              getAriaValueText={setSDSecondary}
               >
             </Slider>
           </Box>
