@@ -14,3 +14,8 @@ Laita React (vite) framework preset :D
 
 **4:**
 Save & Deploy
+
+(extra tälle projektille)
+
+**5:**
+Root directory > kirjoita: rootDir
