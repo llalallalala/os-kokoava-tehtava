@@ -1,5 +1,9 @@
 # aaaaaaaaaa
 
+#
+# Cloudflare pages sivu
+[Avaa](https://os-kokoava-tehtava.pages.dev/)
+
 
 # Cloudflare asennusohjeet:
 
