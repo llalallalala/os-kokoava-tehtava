@@ -24,6 +24,7 @@ function App() {
   }, [])
 
   function print(val:any){console.log(...val)}
+  print("hi worl :D")
 
   const colorWeight:any = {
     "none": 1,
