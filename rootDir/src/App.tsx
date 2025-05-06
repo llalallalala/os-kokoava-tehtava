@@ -8,7 +8,7 @@ import { PaaSivu } from './paasivu.tsx'
 import './App.css'
 
 function App() {
-  const [avaa, setAvaa] = useState(false)
+  const [avaa, setAvaa] = useState(true)
   const [sivu, setSivu] = useState("pääsivu")
   
 
@@ -33,9 +33,9 @@ function App() {
     if (sivu == "pääsivu") {
 
       return (
-        <>
+        <div className='paasivu'>
           <PaaSivu functions={[generateText, random]} />
-        </>
+        </div>
       )
     }
   }
