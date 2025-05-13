@@ -32,11 +32,11 @@ function App() {
   print("hi worl :D")
 
   const colorWeight:any = {
-    "none": 1,
-    "smol": 1.2,
-    "beeg": 1.5,
-    "ginormuz": 1.8,
-    "omg": 2
+    "none": (siteDarkness*1),
+    "smol": (siteDarkness*1.2),
+    "beeg": (siteDarkness*1.5),
+    "ginormuz": (siteDarkness*1.8),
+    "omg": (siteDarkness*2)
   }
 
   //endoftemp
@@ -48,16 +48,16 @@ function App() {
       <>
       <div className='openPageBody' style={
         {backgroundColor: `
-            rgb(${255-siteDarkness*colorWeight.ginormuz},
-            ${255-siteDarkness*colorWeight.ginormuz},
-            ${255-siteDarkness*colorWeight.ginormuz})`}
+            rgb(${255-colorWeight.ginormuz},
+            ${255-colorWeight.ginormuz},
+            ${255-colorWeight.ginormuz})`}
         }>
           <header style={
 
             {backgroundColor: `
-              rgb(${255-siteDarkness*colorWeight.omg},
-              ${255-siteDarkness*colorWeight.omg},
-              ${255-siteDarkness*colorWeight.omg})`}
+              rgb(${255-colorWeight.omg},
+              ${255-colorWeight.omg},
+              ${255-colorWeight.omg})`}
             }>
 
             <h1>aaaaaa</h1>
