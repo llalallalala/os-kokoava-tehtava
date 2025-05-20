@@ -18,6 +18,7 @@ import './App.css'
 
 function App() {
   const [siteName, setSiteName] = useState("Home")
+  const [searchData, setSearchData] = useState(null)
   const [mysteriousPopup, setMP] = useState({status:false, rating:0})
   const displayableSiteList:any = Array.from(["Home", "Search", "BPOpfJ", "hsduf"])
   let allowed = false
@@ -63,7 +64,7 @@ function App() {
       <GetRatingThing />
       <h1 className='fixed'>Sää?</h1>
       <TopBar site={siteName} setSite={setSiteName} displayableSiteList={displayableSiteList} />
-      <DisplayContent fortnitePropHuntProps={[siteName]} />
+      <DisplayContent fortnitePropHuntProps={[siteName, searchData, setSearchData]} />
       <Footer />
     </>
 
