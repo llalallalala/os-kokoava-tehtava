@@ -20,6 +20,8 @@ export function DisplayContent(fortnitePropHuntProps:any) {
 function GetContent(props:any)
 {
     const [site, searchData, setSearchData] = props.site
+    let showSite = false
+
     if (site == "Home")
     {
         return(
@@ -34,12 +36,32 @@ function GetContent(props:any)
     else if (site == "Search")
     {
         useEffect(()=>{
+            console.log(searchData)
             if (searchData == null)
             {
-                console.log("a")
+                async function startFetch() {
+                    await fetch('content.json').then(res=>res.json()).then(data=>
+                        setSearchData(["NotLoaded",data])
+                    )
+                }
+                startFetch()
+            } else {
+                showSite = true
+                if (searchData[0] !== "Loaded"){
+                    setSearchData(["Loaded",searchData])
+                }
             }
         }, [searchData])
 
+        if (showSite == false) {
+            return(
+                <>
+                <div className='Search'>
+                    <h1>Loading...</h1>
+                </div>
+                </>
+            )
+        } else {}
         return(
             <div className='Search'>
                 <h1>Search</h1>
