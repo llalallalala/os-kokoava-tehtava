@@ -15,13 +15,14 @@ import { generateText, random } from './tsTextgen.tsx'
 
 //css
 import './App.css'
-import { BorderAllRounded } from '@mui/icons-material';
 
 function App() {
   const [siteName, setSiteName] = useState("Home")
   const [mysteriousPopup, setMP] = useState({status:false, rating:0})
   const displayableSiteList:any = Array.from(["Home", "Search", "BPOpfJ", "hsduf"])
   let allowed = false
+
+  useEffect(()=>{console.log("xd")}, [])
 
   if (displayableSiteList.filter((v:string)=>v===siteName).length > 0 ) {
     allowed = true
@@ -31,7 +32,7 @@ function App() {
   {
     if (mysteriousPopup.rating < 3)
     {
-      window.location.href = 'https://www.wikihow.com/'//Enjoy-Summer-Vacation'
+      window.location.href = 'https://www.wikihow.com/Enjoy-Summer-Vacation'
     }
   }
 
