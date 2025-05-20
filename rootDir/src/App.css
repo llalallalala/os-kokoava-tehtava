@@ -1,38 +1,57 @@
-body {
-    background-color: black;
-    margin: 0;
+* {
     padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+}
+
+.topBar {
+    background-color: white;
+
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+
+    border-bottom: black solid 2px;
+    justify-content: center;
+}
+
+.Content {
+    background-color: white;
+
+    padding: 10px;
+
+    border-bottom: black solid 2px;
+}
+
+.Content>.Search, .Content>.Search>h1:first-child {
+    padding: 50px;
+    margin: auto;
     text-align: center;
 }
 
-.openPageBody {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
-    font-weight: 800;
-    font-size: x-large;
+.rating {
+    border-radius: 25px;
+    border: 1px black solid;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 150px;
+    left: 10px;
+    height: 50px;
+    bottom: 50px;
+    text-align: center;
+    align-content: center;
 }
 
-/** Pääsivu **/
-.paasivu {
-    background-color: white;
+.fixed {
+    position: fixed;
 }
 
-.paasivu .x {
-    display: flex;
-    flex-direction: row;
-    background-color: azure;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    height: 20%;
-}
-
-.paasivu .x>p {
-    width: 45%;
-}
-
-.paasivu .x>p:last-child {
-    float: left;
+footer {
+    text-align: center;
+    padding: 20px;
+    font-weight: 900;
 }
